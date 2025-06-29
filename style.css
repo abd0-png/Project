@@ -1,0 +1,144 @@
+                               /*------- PART ONE --------*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+    }
+
+body{
+    background: linear-gradient(#111 , #222); /* BACKGROUND WILL REPETED CAUSE BODY HEIGH IS LIKE CONTANT HEIGH ONLY */
+    height: 100vh;
+    width: 100%;
+    display: flex; /* USE IT TO REAGGERNGE ITS CONTANT*/
+    justify-content: center;
+    align-items: center;
+}  
+ /* DRAW  THE CIRCLE ON BODY*/
+ body::after{ /* ADD SOMETHING ABOVE IT*/
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-color: red;
+                position: absolute;                     /* abslute = FLOWTING*/
+                z-index: -1 ;                           /* Control the layers*/
+                clip-path: circle(40% at right  70%);   /* (clip-path) = to draw something */
+
+            }
+
+
+
+.cont{       /* TO MAKE GLASSY EFFECT */
+    width: 80%;
+    height: 80%;
+    background-color: rgba(255,255,255 , 0.1);    /* 0.1 => LIGHTES DEGREE*/
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Start edition the (container) */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; /* The space Will take the left only */
+    margin: auto; /* Make them in both side*/
+    padding: 20px 60px;
+}
+.logo{
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;             /* Make it bolder*/
+}
+
+li { /* Make them in on line | By trans. (block => inline)*/
+    display: inline-block;
+    margin: 0 8px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+
+}
+
+a:hover, a:active {
+    text-decoration: none;
+    color: rgba(241, 0, 0, 0.473);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.co{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    margin: auto;
+    padding: 30px;
+    gap: 40px;
+}
+
+.text{
+    color: white;
+    width: 40%;
+
+}
+h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+p{
+    font-size: 18px;
+    line-height: 25px;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+
+.imge{
+    width: 40%;
+
+}
+
+img{
+    width: 400px;
+}
+
+                /* Screen Tow*/
+                /* Screen Tow*/
+/* Just smaller imge*/
+@media (min-width:950px) and (max-width:1150px){
+
+img{
+    width: 330px;
+} 
+}
+
+
+
+                /* Screen three*/
+                /* Screen thre*/
+
+@media  (max-width:950px){
+
+.co, nav{           /* Both same action and work*/
+   flex-direction: column;
+   justify-content: center; /* Cancel the (just. spacebeteen) which was above */
+}
+    .imge, .text{           /* Change their width */
+        width: 80%;
+    }
+
+
+body::after{
+    clip-path: circle(50% at bottom);
+}
+}

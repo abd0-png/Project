@@ -129,6 +129,11 @@ img{
 
 @media  (max-width:480px){
 
+img{
+    width: 150px;
+} 
+}
+
 .co, nav{           /* Both same action and work*/
    flex-direction: column;
    justify-content: center; /* Cancel the (just. spacebeteen) which was above */

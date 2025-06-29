@@ -115,7 +115,7 @@ img{
                 /* Screen Tow*/
                 /* Screen Tow*/
 /* Just smaller imge*/
-@media (min-width:950px) and (max-width:1150px){
+@media (min-width:481px) and (max-width:768px){
 
 img{
     width: 330px;
@@ -127,7 +127,7 @@ img{
                 /* Screen three*/
                 /* Screen thre*/
 
-@media  (max-width:950px){
+@media  (max-width:480px){
 
 .co, nav{           /* Both same action and work*/
    flex-direction: column;
